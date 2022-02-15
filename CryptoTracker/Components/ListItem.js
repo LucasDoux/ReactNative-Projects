@@ -4,12 +4,12 @@ import { TouchableOpacity, StyleSheet, Image } from 'react-native';
 // import { Container } from './styles';
 
  
-const ListItem = ({name,symbol,currentPrice,priceChangePercentage,logoUrl}) => {
+const ListItem = ({name,symbol,currentPrice,priceChangePercentage,logoUrl, onPress}) => {
     
     const PriceChangeColor = priceChangePercentage > 0 ? '#34C759' : '#FF3839';
 
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={styles.itemWrapper}>
                 {/*Lado esquedo*/}
                 <View style={styles.leftWrapper}>
